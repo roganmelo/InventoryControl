@@ -1,0 +1,18 @@
+.main-panel-heading .btn-primary {
+    margin-top: -2px;
+    border: 1px solid #28415b;
+}
+
+.main-panel-heading .btn-primary.active {
+    background-color: #28415b !important;
+}
+
+.main-panel-heading .btn-primary:hover {
+    background-color: #28415b !important;
+}
+
+.main-panel-heading .btn-primary:focus, .btn-primary.focus {
+    outline: none;
+    background-color: #375a7f;
+    border: 1px solid #28415b;
+}

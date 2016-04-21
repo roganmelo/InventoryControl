@@ -1,0 +1,16 @@
+<div class="modal">
+    <div class="modal-dialog modal-sm">
+        <div class="modal-content error">
+            <div class="modal-header">
+                <i class="glyphicon glyphicon-remove-circle"></i>&nbsp;Error
+                <button type="button" class="close" ng-click="layoutCtrl.closeModalError()">&times;</button>
+            </div>
+            <div class="modal-body">
+                <p>{{body}}</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary" autofocus ng-click="layoutCtrl.closeModalError()">Ok</button>
+            </div>
+        </div>
+    </div>
+</div>

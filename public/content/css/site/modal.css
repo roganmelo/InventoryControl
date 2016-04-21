@@ -1,0 +1,74 @@
+.modal {
+	display: block;
+	transition: all linear 500ms;
+	opacity: 0;
+	transform: translate3d(0, -100%, 0);
+}
+
+.modal.active {
+	opacity: 1;
+	transform: translate3d(0, 0, 0);
+}
+
+.modal-content {
+	transform: translate3d(0, 50%, 0);
+}
+
+.modal-content.success {
+	border: 1px solid #18bc9c;
+}
+
+.modal-content.warning {
+	border: 1px solid #f39c12;
+}
+
+.modal-content.error {
+	border: 1px solid #e74c3c;
+}
+
+.modal-content.success .modal-header {
+	background-color:  #18bc9c;
+}
+
+.modal-content.warning .modal-header {
+	background-color:  #f39c12;
+}
+
+.modal-content.error .modal-header {
+	background-color:  #e74c3c;
+}
+
+.modal-header {
+	border-top-right-radius: 6px;
+	border-top-left-radius: 6px;
+}
+
+.modal-header .close {
+	opacity: 1;
+}
+
+.modal-header .close:hover {
+	opacity: 0.6;
+}
+
+#cloak {
+	display: block;
+	overflow: hidden;
+	position: fixed;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	z-index: 1040;
+	-webkit-overflow-scrolling: touch;
+	outline: 0;
+	transition: opacity linear 500ms;
+	opacity: 0;
+	transform: translate3d(0, -100%, 0);
+}
+
+#cloak.show {
+	transform: translate3d(0, 0, 0);
+	background-color: #000000;
+	opacity: 0.5;
+}

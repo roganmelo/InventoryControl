@@ -1,0 +1,23 @@
+.main-panel-filter {
+    padding: 15px 15px 0 30px;
+}
+
+.main-panel-filter .form-group {
+    margin-bottom: 0;
+}
+
+.main-panel-body {
+    padding: 15px 15px 0 30px;
+}
+
+.main-panel-body.list {
+    margin-bottom: -60px;
+    background-color: #303030;
+    transition: all linear 250ms;
+    transform: translate3d(0, -60px, 0);
+}
+
+.main-panel-body.list.active {
+    margin-bottom: 0;
+    transform: translate3d(0, 0, 0);
+}

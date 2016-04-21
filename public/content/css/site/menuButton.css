@@ -1,0 +1,33 @@
+#menu-button {
+    position: absolute;
+    margin-top: 17px;
+    margin-left: 17px;
+    border: 1px solid #28415b;
+}
+
+#menu-button .icon-bar {
+    margin-top: 3px;
+    background-color: #ffffff;
+    display: block;
+    width: 22px;
+    height: 2px;
+    border-radius: 1px;
+}
+
+#menu-button .icon-bar:first-child {
+    margin-top: 0;
+}
+
+#menu-button.active {
+    background-color: #28415b !important;
+}
+
+#menu-button:hover {
+    background-color: #28415b !important;
+}
+
+#menu-button:focus, #menu-button.focus {
+    outline: none;
+    background-color: #375a7f;
+    border: 1px solid #28415b;
+}

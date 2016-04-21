@@ -1,0 +1,23 @@
+.repeated-element .panel-body {
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+.repeated-element .properties-list {
+    padding: 0;
+    list-style: none;
+    text-align: center;
+}
+
+.repeated-element .properties-list:first-child strong { 
+    font-size: 25px;
+}
+
+.repeated-element .properties-list li {
+    padding: 15px 0px;
+    border-bottom: 1px solid #e1e1e1;
+}
+
+.repeated-element .properties-list li:last-child { 
+    border-bottom: none;
+}

@@ -1,0 +1,87 @@
+<div class="panel panel-primary">
+    <div class="panel-heading">
+        <h3 class="main-panel-title">Edit Product</h3>
+    </div>
+    <div class="main-panel-body">
+        <form class="form-horizontal">
+            <div class="form-group" ng-hide="editProductCtrl.generalMessages.length === 0">
+                <div class="col-md-10">
+                    <span class="form-control alert alert-danger big-message">
+                        <ul>
+                            <li ng-repeat="message in editProductCtrl.generalMessages track by $index">
+                                {{message}}
+                            </li>
+                        </ul>
+                    </span>
+                </div>
+            </div>
+            <div class="form-group has-feedback" ng-class="{ 'has-error': editProductCtrl.messageName.length > 0, 
+                 'has-success': editProductCtrl.messageName.length === 0 }">
+                <label class="col-md-2 control-label">Name</label>
+                <div class="col-md-4">
+                    <input type="text" class="form-control" name="name" ng-model="editProductCtrl.product.name" 
+                    ng-keyup="editProductCtrl.validate('name')" />
+                    <i class="glyphicon glyphicon-ok form-control-feedback"></i>
+                    <i class="glyphicon glyphicon-remove form-control-feedback"></i>
+                </div>
+                <div ng-hide="!editProductCtrl.messageName" class="col-md-4 message">
+                    <span class="form-control alert alert-danger big-message">
+                        {{editProductCtrl.messageName}}
+                    </span>
+                </div>
+            </div>
+            <div class="form-group has-feedback" ng-class="{ 'has-error': editProductCtrl.messageQuantity.length > 0, 
+                 'has-success': editProductCtrl.messageQuantity.length === 0 }">
+                <label class="col-md-2 control-label">Quantity</label>
+                <div class="col-md-4">            
+                    <input type="text" class="form-control" name="quantity" ng-model="editProductCtrl.product.quantity" 
+                    ng-keyup="editProductCtrl.validate('quantity')" />
+                    <i class="glyphicon glyphicon-ok form-control-feedback"></i>
+                    <i class="glyphicon glyphicon-remove form-control-feedback"></i>
+                </div>
+                <div ng-hide="!editProductCtrl.messageQuantity" class="col-md-4 message">
+                    <span class="form-control alert alert-danger big-message">
+                        {{editProductCtrl.messageQuantity}}
+                    </span>
+                </div>
+            </div>
+            <div class="form-group has-feedback" ng-class="{ 'has-error': editProductCtrl.messagePrice.length > 0, 
+                 'has-success': editProductCtrl.messagePrice.length === 0 }">
+                <label class="col-md-2 control-label">Price</label>
+                <div class="col-md-4">
+                    <div class="input-group">
+                        <span class="input-group-addon">$</span>
+                        <input type="text" class="form-control" name="price" ng-model="editProductCtrl.product.price" 
+                        ng-keyup="editProductCtrl.validate('price')" />
+                    </div>
+                    <i class="glyphicon glyphicon-ok form-control-feedback"></i>
+                    <i class="glyphicon glyphicon-remove form-control-feedback"></i>
+                </div>
+                <div ng-hide="!editProductCtrl.messagePrice" class="col-md-4 message">
+                    <span class="form-control alert alert-danger big-message">
+                        {{editProductCtrl.messagePrice}}
+                    </span>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col-md-offset-2 col-md-10">
+                    <button type="submit" class="btn btn-success" ng-click="editProductCtrl.update()" 
+                    ng-disabled="editProductCtrl.messageName.length > 0 || editProductCtrl.messageQuantity.length > 0 
+                    || editProductCtrl.messagePrice.length > 0">
+                        <i class="glyphicon glyphicon-floppy-disk"></i>&nbsp;Save
+                    </button>
+                    <button type="button" class="btn btn-danger btn-reset" ng-click="editProductCtrl.reset()">
+                        <i class="glyphicon glyphicon-remove"></i>&nbsp;Clear
+                    </button>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col-md-offset-2 col-md-10">
+                    <a href="/products" class="btn btn-default">
+                        <i class="glyphicon glyphicon-arrow-left"></i>&nbsp;Back to list
+                    </a>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>

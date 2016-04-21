@@ -1,0 +1,82 @@
+<div class="panel panel-primary">
+    <div class="main-panel-heading">
+        <div class="pull-right">
+            <a href="products/new" class="btn btn-primary btn-sm">
+                <i class="glyphicon glyphicon-plus"></i>&nbsp;New
+            </a>
+            <filter-button ng-show="listProductCtrl.products.length > 0" 
+            ng-click="listProductCtrl.toggleFilter()"></filter-button>
+        </div>
+        <h3 class="main-panel-title">Products</h3>
+    </div>
+    <div class="main-panel-filter" ng-show="listProductCtrl.products.length > 0">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="form-group">
+                    <input ng-model="filter" class="form-control" placeholder="Filter Products"
+                    ng-model-options="{ debounce: 500 }" />
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="main-panel-body" ng-show="listProductCtrl.products.length === 0">
+        <div class="row">
+            <div class="col-md-12">
+                <span class="form-control alert alert-warning">
+                    <i class="glyphicon glyphicon-warning-sign"></i>&nbsp;There are no products yet.
+                </span>
+            </div>
+        </div>
+    </div>
+    <div class="main-panel-body list" ng-show="listProductCtrl.products.length > 0">
+        <div class="row">
+            <div class="col-md-3 repeated-element" ng-repeat="product in listProductCtrl.products | filter: filter">
+                <div class="panel panel-primary">
+                    <div class="panel-heading">
+                        <div class="pull-right dropdown">
+                            <button class="btn btn-primary btn-xs" type="button">
+                                Actions&nbsp;<i class="caret"></i>
+                            </button>
+                            <ul class="dropdown-menu">
+                              <li>
+                                <a href="/products/details/{{product.id}}" class="menu-details">
+                                    <i class="glyphicon glyphicon-list"></i>&nbsp;Details
+                                </a>
+                              </li>
+                              <li>
+                                <a href="/products/edit/{{product.id}}" class="menu-edit">
+                                    <i class="glyphicon glyphicon-pencil"></i>&nbsp;Edit
+                                </a>
+                              </li>
+                              <li>
+                                <a href="#" class="menu-delete" ng-click="listProductCtrl.showModalDelete(product)">
+                                    <i class="glyphicon glyphicon-trash"></i>&nbsp;Delete
+                                </a>
+                              </li>
+                            </ul>
+                        </div>
+                        <h3 class="panel-title">{{product.name}}</h3>
+                    </div>
+                    <div class="panel-body">
+                        <ul class="properties-list">
+                            <li>
+                                <strong>${{product.price}}</strong>
+                                <small>per unit</small>
+                            </li>
+                            <li>
+                                Quantity: {{product.quantity}}
+                            </li>
+                            <li>
+                                Total: ${{product.price * product.quantity}}
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<modal-delete>
+    <button type="button" class="btn btn-primary" autofocus ng-click="layoutCtrl.closeModalDelete()">Cancel</button>
+    <button type="button" class="btn btn-danger" ng-click="listProductCtrl.confirmDelete()">Delete</button>
+</modal-delete>

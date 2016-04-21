@@ -1,0 +1,43 @@
+#wrapper {
+    transition: all linear 250ms;
+    min-width: 360px;
+}
+
+#logo {
+    text-align: center;
+    font-size: 19px;
+}
+
+#logo a {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+#page-content-wrapper {
+    padding-top: 40px;
+    width: 100%;
+    max-width: 1200px;
+    min-width: 360px;
+}
+
+#inset {
+    margin-top: 20px;
+    padding: 20px 10px 0 10px;
+}
+
+.panel {
+    margin-bottom: 15px;
+}
+
+/*.btn-default {
+    color: #333333;
+    background-color: #ffffff;
+    border-color: #ffffff;
+    outline: none;
+}
+
+.btn-default:hover {
+    color: #333333;
+    background-color: #e6e6e6;
+    border-color: #e6e6e6;
+}*/

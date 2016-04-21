@@ -1,0 +1,31 @@
+.repeated-element .panel-heading .dropdown button {
+    margin-top: -5px;
+    border: 1px solid #28415b;
+}
+
+.repeated-element .panel-heading .dropdown:hover button {
+    background-color: #28415b !important;
+}
+
+.repeated-element .panel-heading .dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+.repeated-element .panel-heading .dropdown button:focus, .repeated-element .panel-heading .dropdown.focus button {
+    outline: none;
+    background-color: #375a7f;
+    border: 1px solid #28415b;
+}
+
+.dropdown-menu {
+    margin: 0;
+    background-color: #375a7f; 
+}
+
+.dropdown-menu li a:hover {
+    background-color: #28415b;
+}
+
+.menu-delete:hover {
+    background-color: #e74c3c !important;
+}

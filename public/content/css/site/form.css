@@ -1,0 +1,75 @@
+/*
+    Normal
+*/
+.input-group-addon {
+    background-color: #375a7f;
+}
+
+.input-group .form-control:focus {
+    z-index: 2;
+}
+
+.glyphicon-ok,
+.glyphicon-remove {
+    display: none;
+}
+
+/* 
+    Error
+*/
+.has-error input,
+.has-error select {
+    border: 2px solid #e74c3c !important;
+}
+
+.has-error .glyphicon-ok {
+    display: none;
+}
+
+.has-error .glyphicon-remove {
+    display: inline;
+}
+
+/* 
+    Success
+*/
+.has-success input,
+.has-success select {
+    border: 2px solid #18bc9c !important;
+}
+
+.has-success .glyphicon-remove {
+    display: none;
+}
+
+.has-success .glyphicon-ok {
+    display: inline;
+}
+
+/* 
+    Override the default bootstrap alert style
+*/
+.message {
+    z-index: 999999;
+    height: 45px;
+}
+
+.big-message {
+    height: auto;
+}
+
+.alert {
+    padding: 12px;
+    margin-bottom: 15px;
+}
+
+/* 
+    Override btn-reset style
+*/
+.btn-reset:focus {
+    outline: none;
+}
+
+.btn-reset .glyphicon-remove {
+    display: inline-block;
+}

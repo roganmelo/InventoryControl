@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="AppModule">
+    <head>
+        <base href="/" />
+        <meta charset="utf-8">
+        <title>InventoryControl</title>
+        <meta name="viewport" content="width=device-width initial-scale=1.0, maximum-scale=1">
+        <link rel="shortcut icon" href="content/img/favicon.ico" />
+        <link rel="stylesheet" href="normalize.css/normalize.css" />
+        <link rel="stylesheet" href="content/css/bootstrap/bootstrap.css" />
+        <link rel="stylesheet" href="angular-loading-bar/build/loading-bar.min.css" />
+        <link rel="stylesheet" href="content/css/site/site.css" />
+        <link rel="stylesheet" href="content/css/site/menuButton.css" />
+        <link rel="stylesheet" href="content/css/site/sidebar.css" />
+        <link rel="stylesheet" href="content/css/site/mainPanel.css" />
+        <link rel="stylesheet" href="content/css/site/filterButton.css" />
+        <link rel="stylesheet" href="content/css/site/filter.css" />
+        <link rel="stylesheet" href="content/css/site/repeatedElement.css" />
+        <link rel="stylesheet" href="content/css/site/repeatedElementEffect.css" />
+        <link rel="stylesheet" href="content/css/site/dropdown.css" />
+        <link rel="stylesheet" href="content/css/site/form.css" />
+        <link rel="stylesheet" href="content/css/site/modal.css" />
+    </head>
+    <body id="wrapper">
+        <header class="navbar navbar-default navbar-fixed-top" ng-controller="LayoutController as layoutCtrl">
+            <menu-button ng-click="layoutCtrl.toggleSidebar()"></menu-button>
+            <h1 id="logo">
+                <a href="/">InventoryControl</a>
+            </h1>
+        </header>
+        <sidebar id="sidebar-wrapper"></sidebar>
+        <main id="page-content-wrapper" class="container">
+            <div id="inset">
+                <ng-view></ng-view>
+            </div>
+        </main>
+        <modal-success></modal-success>
+        <modal-error></modal-error>
+        <div id="cloak"></div>
+        <!-- libs -->
+        <script src="angular/angular.min.js"></script>
+        <script src="angular-route/angular-route.min.js"></script>
+        <script src="angular-animate/angular-animate.min.js"></script>
+        <script src="angular-loading-bar/build/loading-bar.min.js"></script>
+        <!-- app -->
+        <script src="scripts/appModule.js"></script>
+        <script src="scripts/appConfig.js"></script>
+        <!-- services -->
+        <script src="scripts/services/servicesModule.js"></script>
+        <script src="scripts/services/common/assertionConcernService.js"></script>
+        <script src="scripts/services/common/statusCodeInterpreterService.js"></script>
+        <script src="scripts/services/product/productServiceBase.js"></script>
+        <script src="scripts/services/product/productService.js"></script>
+        <script src="scripts/services/product/productValidatorService.js"></script>
+        <!-- controllers -->
+        <script src="scripts/controllers/controllersModule.js"></script>
+        <script src="scripts/controllers/layout/layoutController.js"></script>
+        <script src="scripts/controllers/home/homeController.js"></script>
+        <script src="scripts/controllers/product/listProductController.js"></script>
+        <script src="scripts/controllers/product/newProductController.js"></script>
+        <script src="scripts/controllers/product/editProductController.js"></script>
+        <script src="scripts/controllers/product/detailsProductController.js"></script>
+        <!-- directives -->
+        <script src="scripts/directives/directivesModule.js"></script>
+        <script src="scripts/directives/sidebar/sidebar.js"></script>
+        <script src="scripts/directives/menuButton/menuButton.js"></script>
+        <script src="scripts/directives/filterButton/filterButton.js"></script>
+        <script src="scripts/directives/modalSuccess/modalSuccess.js"></script>
+        <script src="scripts/directives/modalError/modalError.js"></script>
+        <script src="scripts/directives/modalDelete/modalDelete.js"></script>
+    </body>
+</html>

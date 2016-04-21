@@ -1,0 +1,22 @@
+.main-panel-body .col-md-3, .col-md-12 {
+    padding-left: 0;
+}
+
+.panel-primary .main-panel-heading {
+    color: #ffffff;
+    background-color: #375a7f;
+    border-color: #375a7f;
+}
+
+.main-panel-title {
+    margin-top: 0;
+    margin-bottom: 0;
+    font-size: 26px;
+}
+
+.main-panel-heading {
+    padding: 10px 15px;
+    border-bottom: 1px solid transparent;
+    border-top-right-radius: 3px;
+    border-top-left-radius: 3px;
+}
